@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="以下结论都是在 Xcode 8.3.2 ARC 的环境下成立  Objective-C 的消息派发Objective-C 是动态的，所有的消息都是在 Runtime 进行派发的，最常见的转发函数为objc_msgSend，它的定义如下 OBJC_EXPORT id objc_msgSend(id self, SEL op, ...) 从以上的定义我们可以得出一个消息转发包含了几大要素：targe">
+<meta name="description" content="以下结论都是在 Xcode 8.3.2 ARC 的环境下成立  Objective-C 的消息派发Objective-C 是动态语言，所有的消息都是在 Runtime 进行派发的，最常见的转发函数为objc_msgSend，它的定义如下OBJC_EXPORT id objc_msgSend(id self, SEL op, ...) 从以上的定义我们可以得出一个消息转发包含了几大要素：targe">
 <meta name="keywords" content="Objective-C,Foundation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 NSInvocation 发送消息">
+<meta property="og:title" content="使用 NSInvocation 向对象发送消息">
 <meta property="og:url" content="http://raomengyun.github.io/2017/05/15/使用-NSInvocation-发送消息/index.html">
 <meta property="og:site_name" content="MuMu&#39;s Blog">
-<meta property="og:description" content="以下结论都是在 Xcode 8.3.2 ARC 的环境下成立  Objective-C 的消息派发Objective-C 是动态的，所有的消息都是在 Runtime 进行派发的，最常见的转发函数为objc_msgSend，它的定义如下 OBJC_EXPORT id objc_msgSend(id self, SEL op, ...) 从以上的定义我们可以得出一个消息转发包含了几大要素：targe">
+<meta property="og:description" content="以下结论都是在 Xcode 8.3.2 ARC 的环境下成立  Objective-C 的消息派发Objective-C 是动态语言，所有的消息都是在 Runtime 进行派发的，最常见的转发函数为objc_msgSend，它的定义如下OBJC_EXPORT id objc_msgSend(id self, SEL op, ...) 从以上的定义我们可以得出一个消息转发包含了几大要素：targe">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/898257-9605b23866078a70.png">
-<meta property="og:updated_time" content="2017-05-15T08:49:53.000Z">
+<meta property="og:updated_time" content="2017-05-15T09:17:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用 NSInvocation 发送消息">
-<meta name="twitter:description" content="以下结论都是在 Xcode 8.3.2 ARC 的环境下成立  Objective-C 的消息派发Objective-C 是动态的，所有的消息都是在 Runtime 进行派发的，最常见的转发函数为objc_msgSend，它的定义如下 OBJC_EXPORT id objc_msgSend(id self, SEL op, ...) 从以上的定义我们可以得出一个消息转发包含了几大要素：targe">
+<meta name="twitter:title" content="使用 NSInvocation 向对象发送消息">
+<meta name="twitter:description" content="以下结论都是在 Xcode 8.3.2 ARC 的环境下成立  Objective-C 的消息派发Objective-C 是动态语言，所有的消息都是在 Runtime 进行派发的，最常见的转发函数为objc_msgSend，它的定义如下OBJC_EXPORT id objc_msgSend(id self, SEL op, ...) 从以上的定义我们可以得出一个消息转发包含了几大要素：targe">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/898257-9605b23866078a70.png">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <title> 使用 NSInvocation 发送消息 | MuMu's Blog </title>
+  <title> 使用 NSInvocation 向对象发送消息 | MuMu's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -293,7 +293,7 @@
             
             
               
-                使用 NSInvocation 发送消息
+                使用 NSInvocation 向对象发送消息
               
             
           </h1>
@@ -348,7 +348,7 @@
 
           
           
-             <span id="/2017/05/15/使用-NSInvocation-发送消息/" class="leancloud_visitors" data-flag-title="使用 NSInvocation 发送消息">
+             <span id="/2017/05/15/使用-NSInvocation-发送消息/" class="leancloud_visitors" data-flag-title="使用 NSInvocation 向对象发送消息">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -380,10 +380,9 @@
         <blockquote>
 <p>以下结论都是在 Xcode 8.3.2 ARC 的环境下成立</p>
 </blockquote>
-<h1 id="Objective-C-的消息派发"><a href="#Objective-C-的消息派发" class="headerlink" title="Objective-C 的消息派发"></a>Objective-C 的消息派发</h1><p>Objective-C 是动态的，所有的消息都是在 Runtime 进行派发的，最常见的转发函数为<code>objc_msgSend</code>，它的定义如下</p>
-<figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">OBJC_EXPORT <span class="keyword">id</span> objc_msgSend(<span class="keyword">id</span> <span class="keyword">self</span>, SEL op, ...)</div></pre></td></tr></table></figure>
-<p>从以上的定义我们可以得出一个消息转发包含了几大要素：target、selector、arguments、return value。</p>
-<h1 id="NSInvocation"><a href="#NSInvocation" class="headerlink" title="NSInvocation"></a>NSInvocation</h1><p>了解了 Objective-C 的消息派发之后，我们再来看看 NSInvocation。<br>NSInvocation 是苹果工程师们提供的一个高层的消息转发系统。<br>它是一个命令对象，可以给任何 Objective-C 对象类型发送消息。</p>
+<h1 id="Objective-C-的消息派发"><a href="#Objective-C-的消息派发" class="headerlink" title="Objective-C 的消息派发"></a>Objective-C 的消息派发</h1><p>Objective-C 是动态语言，所有的消息都是在 Runtime 进行派发的，最常见的转发函数为<code>objc_msgSend</code>，它的定义如下<br><figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">OBJC_EXPORT <span class="keyword">id</span> objc_msgSend(<span class="keyword">id</span> <span class="keyword">self</span>, SEL op, ...)</div></pre></td></tr></table></figure></p>
+<p>从以上的定义我们可以得出一个消息转发包含了几大要素：target、selector、arguments、return value。想必大家都知道使用 <code>performSelector</code> 给对象发送消息，但是<a href="http://stackoverflow.com/questions/7017281/performselector-may-cause-a-leak-because-its-selector-is-unknown" target="_blank" rel="external">在 ARC 场景下 performSelector 可能会造成内存泄漏</a>，并且当参数类型多余2个的时候我们就不能使用 performSelector 来向对象发送消息，接下来就是 NSInvocation 登场了！</p>
+<h1 id="NSInvocation"><a href="#NSInvocation" class="headerlink" title="NSInvocation"></a>NSInvocation</h1><p>NSInvocation 是苹果工程师们提供的一个高层的消息转发系统。它是一个命令对象，可以给任何 Objective-C 对象类型发送消息。</p>
 <h1 id="NSInvocation-的使用"><a href="#NSInvocation-的使用" class="headerlink" title="NSInvocation 的使用"></a>NSInvocation 的使用</h1><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>必须使用工厂方法 <code>invocationWithMethodSignature:</code> 来创建一个 <code>NSInvocation</code> 实例。工厂方法的参数是一个 <code>NSMethodSignature</code> 对象。一般使用 <code>NSObject</code> 的实例方法 <code>methodSignatureForSelector:</code> 或者类方法 <code>instanceMethodSignatureForSelector:</code> 来创建对应 selector 的 NSMethodSignature 对象。</p>
 <p>例：创建类方法的签名与实例方法签名<br><figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)createClassMethodSignature:(SEL)selector &#123;</div><div class="line">    <span class="built_in">NSMethodSignature</span> *methodSignature = [[<span class="keyword">self</span> <span class="keyword">class</span>] methodSignatureForSelector:selector];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)createInstanceMethodSignature:(SEL)selector &#123;</div><div class="line">    <span class="built_in">NSMethodSignature</span> *methodSignature = [<span class="keyword">self</span> methodSignatureForSelector:selector];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="接受对象以及选择子"><a href="#接受对象以及选择子" class="headerlink" title="接受对象以及选择子"></a>接受对象以及选择子</h2><p>需要注意的是 NSMethodSignature 对象仅仅表示了方法的签名：方法的请求、返回数据的编码。所以在使用 NSMethodSignature 来创建 NSInvocation 对象之后仍需指定消息的接收对象和选择子。</p>
