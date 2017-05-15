@@ -1,0 +1,887 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="成为一个爱记录的人">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MuMu&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="MuMu&#39;s Blog">
+<meta property="og:description" content="成为一个爱记录的人">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MuMu&#39;s Blog">
+<meta name="twitter:description" content="成为一个爱记录的人">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
+
+  <title> MuMu's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2f829e39312198f284a71a41c385a77a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">MuMu's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Keep the Minutes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/15/OClint-初探/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MuMu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oalqic5tn.bkt.clouddn.com/personal/avatar.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MuMu's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/15/OClint-初探/" itemprop="url">
+                  OClint 初探
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-15T14:16:41+08:00">
+                2017-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OCLint/" itemprop="url" rel="index">
+                    <span itemprop="name">OCLint</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/15/OClint-初探/" class="leancloud_visitors" data-flag-title="OClint 初探">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-什么是-OCLint"><a href="#1-什么是-OCLint" class="headerlink" title="1. 什么是 OCLint"></a>1. 什么是 OCLint</h1><p><a href="https://github.com/oclint/oclint" target="_blank" rel="external">OCLint</a> 是针对于 C,C++,Objective-C 代码的静态分析工具，目的是提高软件质量并且减少代码中存在的潜在问题，OCLint 旨于分析以下潜在问题：</p>
+<ul>
+<li>可能出现的 bug：if/else/try/catch 等条件语句空的声明</li>
+<li>未使用的代码： 未使用的局部变量以及参数</li>
+<li>复杂的代码逻辑：<a href="https://en.wikipedia.org/wiki/Cyclomatic_complexity" target="_blank" rel="external">高循环复杂度</a>、NP 复杂度（懵）、 高 NCSS（懵）</li>
+<li>冗余代码：冗余的条件表达式以及无效的括号</li>
+<li>代码嗅觉：方法代码行过长或者参数过多</li>
+<li>不好的代码习惯：颠倒的逻辑和参数的错误分配</li>
+<li>…</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Static_program_analysis" target="_blank" rel="external">静态代码分析工具</a>是侦测编译器不可见的潜在缺陷的关键技术。OCLint 具有以下先进的代码检验特性：</p>
+<ul>
+<li>依靠源码的<a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank" rel="external">抽象语法树</a>来提高分析的精确度以及效率，误报率低</li>
+<li>动态规则</li>
+<li>灵活可扩展的配置，确保用户可以自定义分析行为</li>
+<li>命令行式的调用使<a href="https://en.wikipedia.org/wiki/Continuous_integration" target="_blank" rel="external">持续集成</a>成为可能</li>
+</ul>
+<h1 id="2-OCLint-安装"><a href="#2-OCLint-安装" class="headerlink" title="2. OCLint 安装"></a>2. OCLint 安装</h1><p><a href="https://github.com/oclint/oclint/releases" target="_blank" rel="external">下载 OCLint</a> </p>
+<h2 id="2-1-Homebrew-安装"><a href="#2-1-Homebrew-安装" class="headerlink" title="2.1. Homebrew 安装"></a>2.1. Homebrew 安装</h2><p>确保你已经安装了 <a href="https://brew.sh/" target="_blank" rel="external">Homebrew</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ brew install oclint</div></pre></td></tr></table></figure>
+<p>近些天使用 Homebrew 安装 OCLint 经常失败，遂放弃了这种安装方式。</p>
+<h2 id="2-2-下载并设置下载目录为环境变量"><a href="#2-2-下载并设置下载目录为环境变量" class="headerlink" title="2.2. 下载并设置下载目录为环境变量"></a>2.2. 下载并设置下载目录为环境变量</h2><p>添加以下代码到命令行启动文件中，默认启动文件是 <code>.bashrc</code> 或 <code>.bash_profile</code> ，安装 <code>oh-my-zsh</code> 后是 <code>.zshrc</code> 文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ OCLINT_HOME=path-to-oclint-release</div><div class="line">$ <span class="built_in">export</span> PATH=<span class="variable">$OCLINT_HOME</span>/bin:<span class="variable">$PATH</span></div></pre></td></tr></table></figure>
+<p><strong>解释</strong>：<code>path-to-oclint-release</code>是 OCLint 安装包的路径</p>
+<p>使用以下命令判断是否添加环境变量成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></div></pre></td></tr></table></figure>
+<h2 id="2-3-下载并拷贝至系统环境变量中"><a href="#2-3-下载并拷贝至系统环境变量中" class="headerlink" title="2.3. 下载并拷贝至系统环境变量中"></a>2.3. 下载并拷贝至系统环境变量中</h2><p>也可以直接将 OCLint 的可执行文件拷贝至系统文件夹 <code>/usr/local/bin</code>。可以注意到 <code>/usr/local/bin</code> 也在 <code>PATH</code> 中。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">cd</span> oclint</div><div class="line">cp bin/oclint* /usr/<span class="built_in">local</span>/bin/</div><div class="line">cp -rp lib/* /usr/<span class="built_in">local</span>/lib/</div></pre></td></tr></table></figure>
+<h1 id="3-OCLint-工具的组成"><a href="#3-OCLint-工具的组成" class="headerlink" title="3. OCLint 工具的组成"></a>3. OCLint 工具的组成</h1><p>OCLint 工具集由一下三部分组成</p>
+<ul>
+<li>oclint</li>
+<li>oclint-json-compilation-database</li>
+<li>oclint-xcodebuild</li>
+</ul>
+<p>具体的使用手册还是建议大家去阅读他们的<a href="http://oclint-docs.readthedocs.io/en/stable/index.html" target="_blank" rel="external">官方文档</a>，其功能可以简单概括为：</p>
+<ul>
+<li><code>oclint</code> 是 OCLint 工具集最主要的指令，主要作用是规则加载、编译分析选项以及生成分析报告</li>
+<li><code>oclint-json-compilation-database</code> 的作用是将 <a href="http://clang.llvm.org/docs/JSONCompilationDatabase.html" target="_blank" rel="external">JSON Compilation Database format</a> 类型的编译文件 <code>compile_commands.json</code> 解析为 <code>oclint</code> 可以理解的语言。</li>
+<li><code>oclint-xcodebuild</code> 用于将 <code>xcodebuild</code> 生成的 log 文件 <code>xcodebuild.log</code> 转换为 <code>JSON Compilation Database format</code> 类型</li>
+</ul>
+<h1 id="4-OCLint-的使用"><a href="#4-OCLint-的使用" class="headerlink" title="4. OCLint 的使用"></a>4. OCLint 的使用</h1><h2 id="4-1-OCLint-结合-xcodebuild-的使用"><a href="#4-1-OCLint-结合-xcodebuild-的使用" class="headerlink" title="4.1. OCLint 结合 xcodebuild 的使用"></a>4.1. OCLint 结合 xcodebuild 的使用</h2><blockquote>
+<p>xcodebuild 命令用来编译 Xcode 工程，xcodebuild 可以编译 Xcode 工程里面的一个或多个 target，也可以用来编译 Xcode workspace 或者 Xcode project 中的任意一个 scheme。</p>
+</blockquote>
+<p>OCLint 结合 xcodebuild 的使用主要分为一下几个步骤</p>
+<ol>
+<li>使用 xcodebuild clean 清理工程(可选)</li>
+<li>使用 xcodebuild build 编译工程 并且使用 xcpretty 输出编译文件</li>
+<li>使用 oclint-json-compilation-database 输出分析结果</li>
+</ol>
+<h3 id="4-1-1-清理工程（可选）"><a href="#4-1-1-清理工程（可选）" class="headerlink" title="4.1.1. 清理工程（可选）"></a>4.1.1. 清理工程（可选）</h3><p>假设一个源文件已经使用 <a href="https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html" target="_blank" rel="external">xcodebuild</a> 编译过了，并且没有被修改，那么下次编译的时候改源文件不参与编译，也就是说生成的 <code>compile_commands.json</code> 文件里面是不含有该源文件的内容的。如果你希望该源文件每次都编译，可以使用 <code>xcodebuild clean</code> 指令来清理编译缓存。</p>
+<p>然而 <code>clean</code> 过后，编译过程会变得相当漫长，这种现象在大项目中表现最为明显。所以说如果你的项目文件没改动，工程的编译选项也未修改。使用上次的 <code>xcodebuild</code> 和 <code>compile_commands.json</code> 进行分析也是可取的。</p>
+<h3 id="4-1-2-编译工程，输出编译报告"><a href="#4-1-2-编译工程，输出编译报告" class="headerlink" title="4.1.2. 编译工程，输出编译报告"></a>4.1.2. 编译工程，输出编译报告</h3><p>使用 xcodebuild 命令编译工程，例如使用一下命令编译 OCLintDemo.xcworkspace 下的 OCLintDemo scheme。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">xcodebuild -workspace       OCLintDemo.xcworkspace \</div><div class="line">           -scheme          OCLintDemo \</div><div class="line">           -configuration   Debug \</div><div class="line">           -sdks            iphonesimulator10.3 \</div><div class="line">           build</div></pre></td></tr></table></figure>
+<p>此时就有两种方式生成 <code>compile_commands.json</code>。</p>
+<p><strong>方式一：使用 tee 指令获取输出结果为 xcodebuild.log ，使用 oclint-xcodebuild 将 xcodebuild.log 输出为 compile_commands.json 文件</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">xcodebuild -workspace       OCLintDemo.xcworkspace \</div><div class="line">           -scheme          OCLintDemo \</div><div class="line">           -configuration   Debug \</div><div class="line">           -sdks            iphonesimulator10.3 \</div><div class="line">           build | tee xcodebuild.log</div><div class="line"></div><div class="line">oclint-xcodebuild</div></pre></td></tr></table></figure>
+<p><strong>方式二：使用 <a href="https://github.com/supermarin/xcpretty" target="_blank" rel="external">xcpretty</a> 直接将编译结果输出为 compile_commands.json</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">xcodebuild -workspace       OCLintDemo.xcworkspace \</div><div class="line">           -scheme          OCLintDemo \</div><div class="line">           -configuration   Debug \</div><div class="line">           -sdks            iphonesimulator10.3 \</div><div class="line">           build | xcpretty -r json-compilation-database -o compile_commands.json</div></pre></td></tr></table></figure>
+<p>推荐使用 xcpretty 的方式生成 <code>json-compilation-database</code> 类型的编译报告。</p>
+<h3 id="4-1-3-输出分析结果"><a href="#4-1-3-输出分析结果" class="headerlink" title="4.1.3. 输出分析结果"></a>4.1.3. 输出分析结果</h3><p>使用 <code>oclint-json-compilation-database</code> 指令来解析 <code>json-compilation-database</code> 类型的编译报告。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ oclint-json-compilation-database --help</div><div class="line">usage: oclint-json-compilation-database [-h] [-v] [-debug] [-i INCLUDES]</div><div class="line">                                        [<span class="_">-e</span> EXCLUDES]</div><div class="line">                                        [oclint_args [oclint_args ...]]</div><div class="line"></div><div class="line">OCLint <span class="keyword">for</span> JSON Compilation Database (compile_commands.json)</div><div class="line"></div><div class="line">positional arguments:</div><div class="line">  oclint_args           arguments that are passed to OCLint invocation</div><div class="line"></div><div class="line">optional arguments:</div><div class="line">  -h, --help            show this <span class="built_in">help</span> message and <span class="built_in">exit</span></div><div class="line">  -v                    show invocation <span class="built_in">command</span> with arguments</div><div class="line">  -debug, --debug       invoke OCLint <span class="keyword">in</span> debug mode</div><div class="line">  -i INCLUDES, -include INCLUDES, --include INCLUDES</div><div class="line">                        extract files matching pattern</div><div class="line">  <span class="_">-e</span> EXCLUDES, -exclude EXCLUDES, --exclude EXCLUDES</div><div class="line">                        remove files matching pattern</div></pre></td></tr></table></figure>
+<p>从引导上来看，oclint-json-compilation-database 可以通过 <code>-e</code> 选项来忽略对制定路径文件的分析，对于使用 Cocoapods 来管理依赖的工程，我们往往会忽略 Pods 文件夹。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">oclint-json-compilation-database <span class="_">-e</span> Pods -- xxxx</div></pre></td></tr></table></figure>
+<p>通常使用 <code>--</code> 来分割 <code>oclint-json-compilation-database</code> 的参数与 <code>oclint_args</code>。<code>oclint_args</code> 就是 <code>oclint</code> 命令的参数，接下来我们来看看 <code>oclint</code> 指令支持的参数。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ oclint --help</div><div class="line">USAGE: oclint [options] &lt;<span class="built_in">source</span>0&gt; [... &lt;<span class="built_in">source</span>N&gt;]</div><div class="line"></div><div class="line">OPTIONS:</div><div class="line"></div><div class="line">OCLint options:</div><div class="line"></div><div class="line">  -R=&lt;directory&gt;                - Add directory to rule loading path</div><div class="line">  -allow-duplicated-violations  - Allow duplicated violations <span class="keyword">in</span> the OCLint report</div><div class="line">  -disable-rule=&lt;rule name&gt;     - Disable rules</div><div class="line">  -enable-clang-static-analyzer - Enable Clang Static Analyzer, and integrate results into OCLint report</div><div class="line">  -enable-global-analysis       - Compile every <span class="built_in">source</span>, and analyze across global contexts (depends on number of <span class="built_in">source</span> files, could results <span class="keyword">in</span> high memory load)</div><div class="line">  -extra-arg=&lt;string&gt;           - Additional argument to append to the compiler <span class="built_in">command</span> line</div><div class="line">  -extra-arg-before=&lt;string&gt;    - Additional argument to prepend to the compiler <span class="built_in">command</span> line</div><div class="line">  -list-enabled-rules           - List enabled rules</div><div class="line">  -max-priority-1=&lt;threshold&gt;   - The max allowed number of priority 1 violations</div><div class="line">  -max-priority-2=&lt;threshold&gt;   - The max allowed number of priority 2 violations</div><div class="line">  -max-priority-3=&lt;threshold&gt;   - The max allowed number of priority 3 violations</div><div class="line">  -no-analytics                 - Disable the anonymous analytics</div><div class="line">  -o=&lt;path&gt;                     - Write output to &lt;path&gt;</div><div class="line">  -p=&lt;string&gt;                   - Build path</div><div class="line">  -rc=&lt;parameter&gt;=&lt;value&gt;       - Override the default behavior of rules</div><div class="line">  -report-type=&lt;name&gt;           - Change output report <span class="built_in">type</span></div><div class="line">  -rule=&lt;rule name&gt;             - Explicitly pick rules</div><div class="line"></div><div class="line">Generic Options:</div><div class="line"></div><div class="line">  -help                         - Display available options (-help-hidden <span class="keyword">for</span> more)</div><div class="line">  -help-list                    - Display list of available options (-help-list-hidden <span class="keyword">for</span> more)</div><div class="line">  -version                      - Display the version of this program</div><div class="line"></div><div class="line">-p &lt;build-path&gt; is used to <span class="built_in">read</span> a compile <span class="built_in">command</span> database.</div><div class="line"></div><div class="line">	For example, it can be a CMake build directory <span class="keyword">in</span> <span class="built_in">which</span> a file named</div><div class="line">	compile_commands.json exists (use -DCMAKE_EXPORT_COMPILE_COMMANDS=ON</div><div class="line">	CMake option to get this output). When no build path is specified,</div><div class="line">	a search <span class="keyword">for</span> compile_commands.json will be attempted through all</div><div class="line">	parent paths of the first input file . See:</div><div class="line">	http://clang.llvm.org/docs/HowToSetupToolingForLLVM.html <span class="keyword">for</span> an</div><div class="line">	example of setting up Clang Tooling on a <span class="built_in">source</span> tree.</div><div class="line"></div><div class="line">&lt;<span class="built_in">source</span>0&gt; ... specify the paths of <span class="built_in">source</span> files. These paths are</div><div class="line">	looked up <span class="keyword">in</span> the compile <span class="built_in">command</span> database. If the path of a file is</div><div class="line">	absolute, it needs to point into CMake<span class="string">'s source tree. If the path is</span></div><div class="line">	relative, the current working directory needs to be in the CMake</div><div class="line">	source tree and the file must be in a subdirectory of the current</div><div class="line">	working directory. "./" prefixes in the relative files will be</div><div class="line">	automatically removed, but the rest of a relative path must be a</div><div class="line">	suffix of a path in the compile command database.</div><div class="line"></div><div class="line">For more information, please visit http://oclint.org</div></pre></td></tr></table></figure>
+<p>所以一个完整的 <code>oclint-json-compile-database</code> 指令应该这么写</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ oclint-json-compilation-database -e Pods -- -o=report.html</div></pre></td></tr></table></figure>
+<p>生成的 report.html 文件就是最终的分析报告</p>
+<h2 id="4-2-使用-OCLint-分析-Xcode-工程"><a href="#4-2-使用-OCLint-分析-Xcode-工程" class="headerlink" title="4.2. 使用 OCLint 分析 Xcode 工程"></a>4.2. 使用 OCLint 分析 Xcode 工程</h2><p><a href="http://docs.oclint.org/en/stable/guide/xcode.html" target="_blank" rel="external">Using OCLint with Xcode</a></p>
+<h1 id="5-OCLint-与持续集成"><a href="#5-OCLint-与持续集成" class="headerlink" title="5. OCLint 与持续集成"></a>5. OCLint 与持续集成</h1><h1 id="6-遇到的问题"><a href="#6-遇到的问题" class="headerlink" title="6. 遇到的问题"></a>6. 遇到的问题</h1><h2 id="6-1-PCH-错误"><a href="#6-1-PCH-错误" class="headerlink" title="6.1. PCH 错误"></a>6.1. PCH 错误</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">Compiler Errors: (please be aware that these errors will prevent OCLint from analyzing this source code) :0:0: input is not a PCH file: &apos;/xxx/PrefixHeader.pch.pch&apos; :0:0: file &apos;/xxx/PrefixHeader.pch.pch&apos; is not a valid precompiled PCH file :0:0: input is not a PCH file: &apos;/xxx/PrefixHeader.pch.pch&apos; :0:0: file &apos;/xxx/PrefixHeader.pch.pch&apos; is not a valid precompiled PCH file OCLint Report Summary: TotalFiles=0 FilesWithViolations=0 P1=0 P2=0 P3=0 [OCLint (http://oclint.org) v0.12]</div></pre></td></tr></table></figure>
+<p>没找到问题原因，目前只知道将编译选项 <code>Precompile prefix header</code> 设置为 NO 可以解决问题。</p>
+<h2 id="6-2-oclint-error-violations-exceed-threshold"><a href="#6-2-oclint-error-violations-exceed-threshold" class="headerlink" title="6.2. oclint: error: violations exceed threshold"></a>6.2. oclint: error: violations exceed threshold</h2><p>运行 oclint-json-compilation-databse 以下错误<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ oclint-json-compilation-database <span class="_">-e</span> Pods -- -o=report.html</div><div class="line">oclint: error: violations exceed threshold</div><div class="line">P1=0[0] P2=1637[10] P3=53904[20]</div></pre></td></tr></table></figure></p>
+<p>出现这个的原因是项目中的 issue 超过了限制，使用以下 option 来约定最大的 issue 阈值。<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">-max-priority-1=9999 -max-priority-2=9999 -max-priority-3=9999</div></pre></td></tr></table></figure></p>
+<h1 id="7-引用文档"><a href="#7-引用文档" class="headerlink" title="7. 引用文档"></a>7. 引用文档</h1><p><a href="http://docs.oclint.org/en/stable/index.html" target="_blank" rel="external">OCLint Documentation</a></p>
+<p><a href="http://docs.oclint.org/en/stable/guide/xcodebuild.html" target="_blank" rel="external">Using OCLint with xcodebuild</a></p>
+<p><a href="http://docs.oclint.org/en/stable/guide/xcode.html" target="_blank" rel="external">Using OCLint with Xcode</a></p>
+<p><a href="http://docs.oclint.org/en/stable/manual/oclint-json-compilation-database.html" target="_blank" rel="external">oclint-json-compilation-database</a></p>
+<p><a href="https://clang.llvm.org/docs/JSONCompilationDatabase.html" target="_blank" rel="external">json-compilation-database</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://oalqic5tn.bkt.clouddn.com/personal/avatar.JPG"
+               alt="MuMu" />
+          <p class="site-author-name" itemprop="name">MuMu</p>
+           
+              <p class="site-description motion-element" itemprop="description">成为一个爱记录的人</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/raomengyun" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/b183967f4f5b" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MuMu</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("v5dlVgzE5BlqygdcMoGVV801-gzGzoHsz", "NIj66pp0xFStdFoJR7GO0fl7");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
